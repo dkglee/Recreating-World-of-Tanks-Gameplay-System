@@ -47,9 +47,13 @@ https://github.com/user-attachments/assets/ad8b889c-3fb6-4155-97b0-a4fb10d993cb
 - 격자 기반 A\*로 경로 계산, 휴리스틱은 맨해튼/유클리드 혼합
 - 결과 경로를 기반으로 회전 시 호를 그리며 이동
 
-**시연 영상**  
+**시연 영상**
 
-https://github.com/user-attachments/assets/2108d450-b3a4-426d-97a7-ebcf7023717
+
+
+https://github.com/user-attachments/assets/fbc6cb24-1591-4f4a-b028-c74482f9811a
+
+
 
 **설명**
 - 이를 토대로 탱크의 움직임을 고려하여 최적 경로를 탐색할 수 있게 되었습니다.
