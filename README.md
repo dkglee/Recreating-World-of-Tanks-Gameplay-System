@@ -7,6 +7,8 @@ AI 전차의 **경로 탐색(A\*)·기동·조준·사격**을 중심으로, 실
 ### 대표 영상
 <!-- GitHub user-attachments 링크 + YouTube 링크 추가 -->
 
+https://github.com/user-attachments/assets/ad8b889c-3fb6-4155-97b0-a4fb10d993cb
+
 ---
 
 ## 역할 및 목표
