@@ -74,6 +74,9 @@ https://github.com/user-attachments/assets/fbc6cb24-1591-4f4a-b028-c74482f9811a
 
 **시연 영상**  
 
+https://github.com/user-attachments/assets/81d8cfcd-f892-4092-b094-3e13e539869a
+
+
 **설명**
 - 좌표계 불일치 문제를 **전치 행렬**을 통한 좌표 변환으로 해결
 
