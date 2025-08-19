@@ -1,6 +1,6 @@
 # Recreating World of Tanks' Gameplay System
 
-## 프로젝트 설명
+## <mark>프로젝트 설명</mark>
 월드 오브 탱크의 **전차 게임플레이 시스템**을 연구·재구현한 프로젝트입니다.  
 AI 전차의 **경로 탐색(A\*)·기동·조준·사격**을 중심으로, 실제 플레이에 가까운 움직임과 포신 제어를 구현했습니다.
 
@@ -11,7 +11,7 @@ https://github.com/user-attachments/assets/ad8b889c-3fb6-4155-97b0-a4fb10d993cb
 
 ---
 
-## 역할 및 목표
+## <mark>역할 및 목표</mark>
 
 **역할**
 - AI 전차(경전차) 설계 및 구현
@@ -27,7 +27,7 @@ https://github.com/user-attachments/assets/ad8b889c-3fb6-4155-97b0-a4fb10d993cb
 
 ## 주요 기능
 
-### 01. AI 전차 FSM(탐색·추적·조준·사격)
+### <mark>01. AI 전차 FSM(탐색·추적·조준·사격)</mark>
 전차 행동을 상태 머신으로 단순화하여 **작동 가능한 수준**으로 구현.
 - 기본 상태: `Idle → 점령지 이동
 - 적 발견 시: 추적 → 조준 → 사격(재장전 포함)
@@ -36,17 +36,16 @@ https://github.com/user-attachments/assets/ad8b889c-3fb6-4155-97b0-a4fb10d993cb
 
 **시연 영상**
 
-
-
 https://github.com/user-attachments/assets/97294843-d2c8-4fbb-ae2d-ceafeb14adcb
-
-
 
 **소스 코드**  
 
+[FSM 소스 코드 바로가기](https://github.com/dkglee/Recreating-World-of-Tanks-Gameplay-System/blob/main/Source/MyProject/deulee/LightTank/Character/FSM/Private/ACLightTankFSM.cpp) <br>
+[FSM 상태 소스 코드(폴더) 바로가기](https://github.com/dkglee/Recreating-World-of-Tanks-Gameplay-System/tree/main/Source/MyProject/deulee/LightTank/Character/FSM/State/Private)
+
 ---
 
-### 02. 경로 탐색(A\*)
+### <mark>02. 경로 탐색(A\*)</mark>
 장애물과 회전 반경을 고려해 **목표까지의 최적 경로**를 탐색.
 - 격자 기반 A\*로 경로 계산, 휴리스틱은 맨해튼/유클리드 혼합
 - 결과 경로를 기반으로 회전 시 호를 그리며 이동
@@ -64,9 +63,11 @@ https://github.com/user-attachments/assets/fbc6cb24-1591-4f4a-b028-c74482f9811a
 
 **소스 코드**  
 
+[A\* 기반 경로 탐색 소스 코드 바로가기](https://github.com/dkglee/LocalTankFinal/blob/main/Source/MyProject/deulee/LightTank/Pathfinding/Private/UAStarPathFinding.cpp)
+
 ---
 
-### 03. 포신 정렬 및 탄도 사격
+### <mark>03. 포신 정렬 및 탄도 사격</mark>
 포물선 공식을 사용해 **목표에 필요한 포신 각도**를 계산.
 - 목표 위치를 전차 기준 좌표로 변환(전치 행렬 활용)  
 - 초기 속도 `v`, 중력 `g`로 발사각 `θ`를 해 구해 포신 고각을 설정  
@@ -81,6 +82,8 @@ https://github.com/user-attachments/assets/81d8cfcd-f892-4092-b094-3e13e539869a
 - 좌표계 불일치 문제를 **전치 행렬**을 통한 좌표 변환으로 해결
 
 **소스 코드**  
+
+[전차 포신·터렛 목표각 계산 소스 코드 바로가기](https://github.com/dkglee/LocalTankFinal/blob/main/Source/MyProject/deulee/LightTank/Character/FSM/State/Private/UTankTopAlignmentState.cpp)
 
 ---
 
